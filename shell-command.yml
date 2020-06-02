@@ -1,7 +1,7 @@
 ---
 - name: Doing things the wrong way...
   hosts: all
-  become: true
+  become: false
   tasks:
 
   - name: get release
