@@ -1,0 +1,14 @@
+---
+- name: Doing things the wrong way...
+  hosts: all
+  become: true
+  tasks:
+
+  - name: get release
+    command: cat /etc/redhat-release
+
+  - name: create file
+    shell: touch /tmp/new-file
+
+  - name: delete file
+    raw: rm /tmp/new-file
